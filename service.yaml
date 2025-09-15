@@ -4,6 +4,7 @@ metadata:
   name: healthcare-service
 spec:
   selector:
+    type: NodePort
     app: healthapp
   ports:
     - port: 5000

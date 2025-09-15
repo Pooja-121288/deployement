@@ -6,7 +6,8 @@ spec:
   selector:
     app: healthapp
   ports:
-    - port: 5000
+    - protocol: TCP
+      port: 5000
       targetPort: 8080
       nodePort: 30036
-type: NodePort
+  type: NodePort

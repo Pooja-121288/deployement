@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: healthapp-deployment
+spec:
+  replicas: 2 # original name
+  selector:
+    matchLabels:
+      app: healthapp
+  template:
+    metadata:
+      labels:
+        app: healthapp # common name
+    spec:
+      containers:
+      - name: healthcare-container
+        image: root121288/pooja121288:healthapp
